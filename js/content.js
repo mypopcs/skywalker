@@ -80,27 +80,27 @@
 // // 开始观察目标节点
 // observer.observe(document.body, MutationObserverConfig);
 //存储数据
-chrome.storage.sync.set({
-  string: 'demo',
-  array: ['数组', '或者'],
-  object: {
-    k: '或者',
-    v: '对象'
-  },
-  int: 111
-}, function(){
-  console.log('保存成功')
-})
+// chrome.storage.sync.set({
+//   string: 'demo',
+//   array: ['数组', '或者'],
+//   object: {
+//     k: '或者',
+//     v: '对象'
+//   },
+//   int: 111
+// }, function(){
+//   console.log('保存成功')
+// })
 //获取数据
 // chrome.storage.local.get函数需要两个参数，第一个为要获取的键值，第二个是获取成功回调函数
-chrome.storage.sync.get('array', function(arr){
-  console.log(arr);
-})
-//还可以这样
-chrome.storage.sync.get(['object', 'string'], function(obj){
-  console.log(obj.object)
-  console.log(obj.string)
-})
+// chrome.storage.sync.get('array', function(arr){
+//   console.log(arr);
+// })
+// //还可以这样
+// chrome.storage.sync.get(['object', 'string'], function(obj){
+//   console.log(obj.object)
+//   console.log(obj.string)
+// })
 //删除数据
 // chrome.storage.local.get函数需要两个参数，第一个为要获取的键值，第二个是获取成功回调函数
 // chrome.storage.local.remove('string', function(){

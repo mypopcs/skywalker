@@ -14,17 +14,20 @@
     "content_scripts": [
       {
         "matches": [
-          "*://*.figma.com/*","*://*.apitracker.io/*"
+          "*://*.figma.com/*","*://*.baidu.com/*"
         ],
         "js": [
-          "js/content.js"
+          "js/jquery-3.6.0.min.js",
+          "js/dataHandle.js"
         ],
+        "css": ["css/index.css"],
         "run_at": "document_end",
         "all_frames": true
       }
     ],
     "background": {
       "scripts": [
+        "js/jquery-3.6.0.min.js",
         "js/background.js"
       ]
     }
